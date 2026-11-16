@@ -413,7 +413,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "BREAD_Slice-rescue:10k_t-OCI_UPL_1_Resistors"
+		(symbol "Device:R_Potentiometer_Trim"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -498,7 +498,7 @@
 					)
 				)
 			)
-			(symbol "10k_t-OCI_UPL_1_Resistors_0_1"
+			(symbol "R_Potentiometer_Trim_0_1"
 				(rectangle
 					(start -2.54 1.016)
 					(end 2.54 -1.016)
@@ -523,7 +523,7 @@
 					)
 				)
 			)
-			(symbol "10k_t-OCI_UPL_1_Resistors_1_1"
+			(symbol "R_Potentiometer_Trim_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 1.27)
@@ -581,7 +581,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors"
+		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
 			)
@@ -679,7 +679,7 @@
 					)
 				)
 			)
-			(symbol "1K-OCI_UPL_1_Resistors_0_1"
+			(symbol "R_0_1"
 				(rectangle
 					(start 2.54 -1.016)
 					(end -2.54 1.016)
@@ -692,7 +692,7 @@
 					)
 				)
 			)
-			(symbol "1K-OCI_UPL_1_Resistors_1_1"
+			(symbol "R_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 1.27)
@@ -732,7 +732,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "BREAD_Slice-rescue:1uF_t-OCI_UPL_2_Capacitors"
+		(symbol "Device:C_Polarized_US"
 			(pin_numbers
 				(hide yes)
 			)
@@ -833,7 +833,7 @@
 					)
 				)
 			)
-			(symbol "1uF_t-OCI_UPL_2_Capacitors_0_1"
+			(symbol "C_Polarized_US_0_1"
 				(polyline
 					(pts
 						(xy -2.032 0.762) (xy 2.032 0.762)
@@ -883,7 +883,7 @@
 					)
 				)
 			)
-			(symbol "1uF_t-OCI_UPL_2_Capacitors_1_1"
+			(symbol "C_Polarized_US_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
@@ -1863,7 +1863,7 @@
 		(uuid "f5d140b9-1f38-4a62-b1fd-a6f2c46aaaee")
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 128.27 77.47 0)
 		(unit 1)
 		(body_style 1)
@@ -2119,7 +2119,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 133.35 69.85 270)
 		(unit 1)
 		(body_style 1)
@@ -2242,7 +2242,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:10k_t-OCI_UPL_1_Resistors")
+		(lib_id "Device:R_Potentiometer_Trim")
 		(at 76.2 80.01 270)
 		(unit 1)
 		(body_style 1)
@@ -2368,7 +2368,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 227.33 76.2 0)
 		(unit 1)
 		(body_style 1)
@@ -2489,7 +2489,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 140.97 87.63 0)
 		(unit 1)
 		(body_style 1)
@@ -2610,7 +2610,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1uF_t-OCI_UPL_2_Capacitors")
+		(lib_id "Device:C_Polarized_US")
 		(at 236.22 88.9 0)
 		(unit 1)
 		(body_style 1)
@@ -2733,7 +2733,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 96.52 93.98 0)
 		(unit 1)
 		(body_style 1)
@@ -3259,7 +3259,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 182.88 83.82 0)
 		(unit 1)
 		(body_style 1)
@@ -3380,7 +3380,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1K-OCI_UPL_1_Resistors")
+		(lib_id "Device:R")
 		(at 128.27 82.55 0)
 		(unit 1)
 		(body_style 1)
@@ -3501,7 +3501,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:10k_t-OCI_UPL_1_Resistors")
+		(lib_id "Device:R_Potentiometer_Trim")
 		(at 196.85 83.82 90)
 		(mirror x)
 		(unit 1)
@@ -3628,7 +3628,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:1uF_t-OCI_UPL_2_Capacitors")
+		(lib_id "Device:C_Polarized_US")
 		(at 36.83 82.55 0)
 		(mirror y)
 		(unit 1)

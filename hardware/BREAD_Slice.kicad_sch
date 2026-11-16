@@ -5,7 +5,7 @@
 	(uuid "66043bca-a260-4915-9fce-8a51d324c687")
 	(paper "A4")
 	(lib_symbols
-		(symbol "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors"
+		(symbol "Connector:Screw_Terminal_01x02"
 			(pin_names
 				(offset 1.016)
 			)
@@ -89,7 +89,7 @@
 					)
 				)
 			)
-			(symbol "Term_2-OCI_UPL_10_Connectors_0_1"
+			(symbol "Screw_Terminal_01x02_0_1"
 				(rectangle
 					(start -1.524 5.588)
 					(end 1.524 -1.778)
@@ -148,7 +148,7 @@
 					)
 				)
 			)
-			(symbol "Term_2-OCI_UPL_10_Connectors_1_1"
+			(symbol "Screw_Terminal_01x02_1_1"
 				(pin input line
 					(at -6.35 3.81 0)
 					(length 5.08)
@@ -2060,7 +2060,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SparkFun-Connector:I2C_01x04"
+		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -2145,7 +2145,7 @@
 					)
 				)
 			)
-			(symbol "I2C_01x04_1_1"
+			(symbol "Conn_01x04_1_1"
 				(rectangle
 					(start -1.27 3.81)
 					(end 3.81 -6.35)
@@ -6139,7 +6139,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
+		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 170.18 151.13 0)
 		(unit 1)
 		(body_style 1)
@@ -7296,7 +7296,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
+		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 170.18 105.41 0)
 		(unit 1)
 		(body_style 1)
@@ -7553,7 +7553,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
+		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 170.18 127 0)
 		(unit 1)
 		(body_style 1)
@@ -8469,7 +8469,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
+		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 170.18 71.12 0)
 		(unit 1)
 		(body_style 1)
@@ -8649,7 +8649,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
+		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 170.18 88.9 0)
 		(unit 1)
 		(body_style 1)
@@ -8752,7 +8752,7 @@
 		)
 	)
 	(symbol
-		(lib_id "BREAD_Slice-rescue:Term_2-OCI_UPL_10_Connectors")
+		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 170.18 53.34 0)
 		(unit 1)
 		(body_style 1)
@@ -9648,7 +9648,7 @@
 		)
 	)
 	(symbol
-		(lib_id "SparkFun-Connector:I2C_01x04")
+		(lib_id "Connector_Generic:Conn_01x04")
 		(at 33.02 46.99 270)
 		(unit 1)
 		(body_style 1)
