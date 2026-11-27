@@ -1216,7 +1216,7 @@
 		)
 		(uuid "090a8516-bacb-4b43-8348-0e85b527c509")
 	)
-	(text_box "Provides variable gain by adjusting the feedback resistance using a 10k potentiometer. Op-amp UxC is in an inverting amplifier configuration and the gain is adjustable by varying the resistance of the potentiometer, allowing control over the output signal amplitude:\n\nVout = - ((R + RV) / RV) * Vin\nVout_rv10k = 1.10 * Vin \nVout_rv05k = 1.20 * Vin \nVout_rv03k = 1.33 * Vin \nVout_rv01k = 2.00 * Vin \n"
+	(text_box "Non-inverting gain stage. UxC+ takes the difference stage output. RV (10k) runs from UxC out (pin 1) to GND (pin 3); its wiper drives UxC- through R (1k), which carries no current, so UxC- sits at the wiper voltage:\n\nG = Vout / Vin = 10k / R(wiper to GND)\nR = 10k: G = 1.0\nR = 5k: G = 2.0\nR = 2k: G = 5.0\nR = 1k: G = 10\nNear R = 0 the stage runs open loop: keep the wiper off the GND end."
 		(exclude_from_sim no)
 		(at 168.91 101.6 0)
 		(size 50.8 26.67)
