@@ -1,174 +1,27 @@
-schema_version: "1.0"
-
-# ── Identity ──────────────────────────────────────────────────────────────────
-id: "slice-lvai"
-name: "Low-Voltage Analog Input Reader"
-status: "prototype"
-category: "sensing"
-
-summary: "6-channel low-voltage analog input reader with FFT analysis."
-description: null
-
-# ── Versioning ────────────────────────────────────────────────────────────────
-version:
-  hardware: "0.1.0"
-  firmware: "0.1.0"
-  manifest: "0.1.0"
-
-# ── Compatibility ─────────────────────────────────────────────────────────────
-compatibility:
-  slice_spec: ">=0.1.0 <0.2.0"
-  crumbs_protocol: null
-  anolis_provider_api: null
-
-# ── Hardware ──────────────────────────────────────────────────────────────────
+# slice.yaml: BREAD Slice manifest, schema 2.0 (bread-infra spec/slice/slice-manifest-spec.md)
+schema_version: '2.0'
+id: slice-lvai
+name: Low-Voltage Analog Input Reader
+summary: 6-channel low-voltage analog input reader with FFT analysis.
+category: sensing
+status: development
 hardware:
-  mcu:
-    type: "dev-board-socket"
-    form_factor: "nano"
-    primary: "ATmega328P"
-    supported:
-      - "ATmega328P"
-  primary_ic: null
-  hw_gen_current: 1
-  hw_gen_supported: [1]
+  hw_gen_current: 3
+  interface: SI1
   pcb:
     layers: 2
-    thickness: "1.6mm"
-    copper_weight: "1oz"
-    dimensions: "70mm x 100mm"
-  connectors:
-    - ref: "J1"
-      type: "slice-bus-10pin"
-      purpose: "power-and-i2c"
+    dimensions: 70mm x 100mm
+    thickness: 1.6mm
   mounting:
-    pattern: "slice-standard-v0"
-    hole_size: "M3"
-    inset: "5mm"
-  pcb_color_prototype: null
-  pcb_color_production: null
-  enclosure:
-    supported: false
-    path: null
-
-# ── Electrical ────────────────────────────────────────────────────────────────
-electrical:
-  input_voltage: "12V"
-  logic_voltage: "5V"
-  max_current: null
-  protection: null
-  isolation: null
-
-# ── Interfaces ────────────────────────────────────────────────────────────────
+    pattern: slice-S-v0
+  mcu:
+    form_factor: nano
 interfaces:
   host:
-    type: "i2c"
     address_default: 23
-    address_configurable: false
-  data:
-    inputs:
-      - name: "CH1"
-        type: "analog-voltage"
-      - name: "CH2"
-        type: "analog-voltage"
-      - name: "CH3"
-        type: "analog-voltage"
-      - name: "CH4"
-        type: "analog-voltage"
-      - name: "CH5"
-        type: "analog-voltage"
-      - name: "CH6"
-        type: "analog-voltage"
-    outputs: []
-
-# ── Capabilities ──────────────────────────────────────────────────────────────
-capabilities:
-  - id: "analog_input"
-    channels: 6
-    control_modes:
-      - "sample"
-      - "fft"
-
-# ── Firmware ──────────────────────────────────────────────────────────────────
-firmware:
-  language: "C++"
-  framework: "arduino"
-  build_system: "arduino-ide"
-  entry_point: "firmware/LVAI.ino"
-  path: "firmware"
-  required: false
-  targets:
-    - "nano"
-  lib_deps:
-    - "arduinoFFT"
-  i2c:
-    address_default: 23
-    address_configurable: false
-  libraries:
-    - name: "Wire"
-      purpose: "I2C communication"
-    - name: "SPI"
-      purpose: "SPI bus"
-    - name: "arduinoFFT"
-      purpose: "FFT frequency analysis"
-
-# ── Protocol ──────────────────────────────────────────────────────────────────
-protocol:
-  type: "i2c-register"
-  description: "I2C slave at address 23; receives commands and returns float data via union encoding."
-  commands: []
-
-# ── Software ──────────────────────────────────────────────────────────────────
-software: null
-
-# ── Artifacts ─────────────────────────────────────────────────────────────────
-artifacts:
-  schematic: "hardware/BREAD_Slice.kicad_sch"
-  pcb: "hardware/BREAD_Slice.kicad_pcb"
-  firmware: "firmware/LVAI.ino"
-  docs: null
-  bom: "documentation/BOM_TEMP.ods"
-  gerbers: "hardware/Gerbers.zip"
-  pick_and_place: null
-  datasheets: []
-
-# ── Manufacturing ─────────────────────────────────────────────────────────────
-manufacturing: null
-
-# ── Validation ────────────────────────────────────────────────────────────────
-validation: null
-
-# ── Safety ────────────────────────────────────────────────────────────────────
-safety: null
-
-# ── Dependencies ──────────────────────────────────────────────────────────────
-dependencies: null
-
-# ── Relations ─────────────────────────────────────────────────────────────────
-related: null
-
-# ── Maintainers ───────────────────────────────────────────────────────────────
-maintainers:
-  - name: "Cameron Brooks"
-    role: "owner"
-
-# ── License ───────────────────────────────────────────────────────────────────
-license:
-  hardware: "CERN-OHL-S-2.0"
-  firmware: "GPL-3.0-only"
-  software: null
-  docs: "CC-BY-4.0"
-
-# ── Repository ────────────────────────────────────────────────────────────────
-repository:
-  url: "https://github.com/feastorg/Slice_LVAI"
-
-# ── Metadata ──────────────────────────────────────────────────────────────────
 metadata:
-  created: "2026-05-19"
-  updated: "2026-05-19"
   tags:
-    - "analog-input"
-    - "fft"
-    - "voltage-measurement"
-    - "signal-processing"
+  - analog-input
+  - fft
+  - voltage-measurement
+  - signal-processing
