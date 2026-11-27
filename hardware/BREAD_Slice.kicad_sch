@@ -4708,7 +4708,7 @@
 		)
 		(uuid "4780a290-d25c-4459-9579-eba3f7678762")
 	)
-	(label "CH3_AI"
+	(label "CH1_AI"
 		(at 62.23 172.72 180)
 		(effects
 			(font
@@ -4798,7 +4798,7 @@
 		)
 		(uuid "878340f8-5c7e-4f23-9c18-3702aaf7d105")
 	)
-	(label "CH1_AI"
+	(label "CH3_AI"
 		(at 62.23 170.18 180)
 		(effects
 			(font
