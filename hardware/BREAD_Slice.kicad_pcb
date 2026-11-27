@@ -12796,7 +12796,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "15e7f892-5cda-4371-b551-cf6cecacbac2")
@@ -12808,7 +12808,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -12836,7 +12836,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -12850,7 +12850,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -14977,7 +14977,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "2fc9e4c9-d5c5-47bf-9176-ec742889cb57")
@@ -14989,7 +14989,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15017,7 +15017,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15031,7 +15031,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15889,7 +15889,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 0 -1.85 90)
 			(layer "B.Fab")
 			(uuid "0a70f27e-1f26-4ae7-9bf2-13050acc4969")
@@ -15901,7 +15901,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15929,7 +15929,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15943,7 +15943,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -16359,7 +16359,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 0 -1.85 90)
 			(layer "B.Fab")
 			(uuid "1cfec696-0036-47bd-9dbc-de4f65f99339")
@@ -16371,7 +16371,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -16399,7 +16399,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -16413,7 +16413,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18239,7 +18239,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 0 -1.85 90)
 			(layer "B.Fab")
 			(uuid "08817f40-81c7-4947-a3cd-a528dad49e75")
@@ -18251,7 +18251,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18279,7 +18279,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18293,7 +18293,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19469,7 +19469,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "6759f4ec-8fff-4555-a5b4-d2a68bb310f2")
@@ -19481,7 +19481,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19509,7 +19509,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19523,7 +19523,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19939,7 +19939,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "2aa37553-d95e-412e-9351-9204cd974ced")
@@ -19951,7 +19951,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19979,7 +19979,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19993,7 +19993,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20644,7 +20644,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "c5ae9fe4-e560-4858-acaa-037315deced1")
@@ -20656,7 +20656,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20684,7 +20684,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20698,7 +20698,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20879,7 +20879,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 0 -1.85 0)
 			(layer "B.Fab")
 			(uuid "ae65d2b6-ee8e-4028-901f-c94365ef4b14")
@@ -20891,7 +20891,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20919,7 +20919,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20933,7 +20933,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21556,7 +21556,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "8b5a8b43-7287-4334-ad0c-69596e1acb9c")
@@ -21568,7 +21568,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21596,7 +21596,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21610,7 +21610,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21998,7 +21998,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 0 -1.85 90)
 			(layer "B.Fab")
 			(uuid "53559208-c9fb-478e-a17a-cefcac429996")
@@ -22010,7 +22010,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22038,7 +22038,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22052,7 +22052,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22938,7 +22938,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 0 -1.85 180)
 			(layer "B.Fab")
 			(uuid "bb8fec05-83bc-4b17-96b2-39921569bbff")
@@ -22950,7 +22950,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22978,7 +22978,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22992,7 +22992,7 @@
 				(justify mirror)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")

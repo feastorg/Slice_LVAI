@@ -732,13 +732,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C_Polarized_US"
+		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
 				(offset 0.254)
-				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -756,7 +755,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "1uF_t-OCI_UPL_2_Capacitors"
+			(property "Value" "C"
 				(at 0.635 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -767,29 +766,18 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "OCI_UPL_FOOTPRINTS:C_1206_HandSoldering"
-				(at 0 -6.35 0)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
 					(font
-						(size 0.762 0.762)
+						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-				)
-			)
-			(property "Description" ""
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -800,29 +788,7 @@
 					)
 				)
 			)
-			(property "Part #" "T491A105K025AT"
-				(at 0 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-				)
-			)
-			(property "UPL #" "2.019"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 0.762 0.762)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SMD*_Pol c_elec* C*elec TantalC* Elko* CP*"
+			(property "Description" "Unpolarized capacitor"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -833,7 +799,29 @@
 					)
 				)
 			)
-			(symbol "C_Polarized_US_0_1"
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
 				(polyline
 					(pts
 						(xy -2.032 0.762) (xy 2.032 0.762)
@@ -848,32 +836,8 @@
 				)
 				(polyline
 					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.778) (xy -1.27 2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.032 -1.27)
-					(mid 0 -0.5572)
-					(end 2.032 -1.27)
 					(stroke
 						(width 0.508)
 						(type default)
@@ -883,39 +847,39 @@
 					)
 				)
 			)
-			(symbol "C_Polarized_US_1_1"
+			(symbol "C_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
 					(name ""
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
 					(at 0 -3.81 90)
-					(length 3.302)
+					(length 2.794)
 					(name ""
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -1084,7 +1048,7 @@
 		)
 		(uuid "0e9e6291-8a37-483d-afd9-52e166390f71")
 	)
-	(text_box "This is to feed the power rails of the quad op amp with a capacitor to decouple noise from the power supply."
+	(text_box "Decouples the quad op amp's supply: 1 µF X7R ceramic from 5V to GND (bulk; MCP6004 datasheet section 4.4 asks for >= 1 µF within 100 mm)."
 		(exclude_from_sim no)
 		(at 22.86 101.6 0)
 		(size 40.64 26.67)
@@ -1104,7 +1068,7 @@
 		)
 		(uuid "49d7f303-3107-40d5-9e58-ad4bbb0acdec")
 	)
-	(text_box "Attenuates high-frequency noise using a low-pass filter formed by the 1kΩ resistor and the 1μF capacitor. Op-amp UxD is configured as a buffer (voltage follower) to maintain signal integrity and ensure a stable filtered analog output.\n\nThe cut-off frequency is:\nfc = 1/(2*pi*R*C)\nfc = 159.15 Hz"
+	(text_box "Attenuates high-frequency noise using a low-pass filter formed by the 1kΩ resistor and the 1μF C0G capacitor (C0G keeps its value over DC bias and temperature, so the corner stays put). Op-amp UxD is configured as a buffer (voltage follower) to maintain signal integrity and ensure a stable filtered analog output.\n\nThe cut-off frequency is:\nfc = 1/(2*pi*R*C)\nfc = 159.15 Hz"
 		(exclude_from_sim no)
 		(at 220.98 101.6 0)
 		(size 50.8 26.67)
@@ -2610,7 +2574,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_US")
+		(lib_id "Device:C")
 		(at 236.22 88.9 0)
 		(unit 1)
 		(body_style 1)
@@ -2631,7 +2595,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF C0G"
 			(at 239.141 90.043 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2653,7 +2617,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 236.22 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2675,7 +2639,7 @@
 				)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "C3216C0G1E105J160AC"
 			(at 236.22 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -2686,7 +2650,7 @@
 				)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 236.22 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -3628,7 +3592,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_US")
+		(lib_id "Device:C")
 		(at 36.83 82.55 0)
 		(mirror y)
 		(unit 1)
@@ -3650,7 +3614,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF_t"
+		(property "Value" "1uF X7R"
 			(at 33.909 83.693 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3672,7 +3636,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/short/qcd8w2"
+		(property "Datasheet" ""
 			(at 36.83 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -3694,7 +3658,7 @@
 				)
 			)
 		)
-		(property "Part #" "T491A105K025AT"
+		(property "Part #" "CL31B105KBHNNNE"
 			(at 36.83 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3705,7 +3669,7 @@
 				)
 			)
 		)
-		(property "UPL #" "2.019"
+		(property "UPL #" ""
 			(at 36.83 87.63 0)
 			(hide yes)
 			(show_name no)
