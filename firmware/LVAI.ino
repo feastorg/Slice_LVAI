@@ -84,12 +84,13 @@ class Channel {
       }
 };
 
-Channel CH0(A0); 
-Channel CH1(A1); 
-Channel CH2(A2); 
-Channel CH3(A3); 
-Channel CH4(A6); 
-Channel CH5(A7); 
+// CHn is the input on terminal CHn; each reads the Nano pin its channel is wired to.
+Channel CH0(A3);
+Channel CH1(A7);
+Channel CH2(A2);
+Channel CH3(A6);
+Channel CH4(A1);
+Channel CH5(A0);
 
 String inputString = "";         // a String to hold incoming data
 boolean stringComplete = false;  // whether the string is complete
