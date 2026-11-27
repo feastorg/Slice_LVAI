@@ -35,3 +35,9 @@ design-block-lib-table
 # filter). Per-developer local state, not design intent -- tracking it dirties
 # the working tree every time anyone opens the board.
 *.kicad_prl
+
+# SPICE netlists and decks generated from hardware/sim/ by hardware/sim/check.py
+build/
+# Microchip's MCP6001/2/4 macro model: licensed for use with Microchip parts, not
+# redistributed here; hardware/sim/check.py says where to get it.
+hardware/sim/models/MCP6001.txt

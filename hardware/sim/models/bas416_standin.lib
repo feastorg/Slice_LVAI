@@ -1,0 +1,4 @@
+* BAS416 low-leakage switching diode: DATA-SHEET STAND-IN, not Nexperia's model.
+* Fitted to the BAS416 data sheet (Nexperia, 8 Oct 2024): VF <= 0.9 V at 1 mA (0.77 V here),
+* VF <= 1.0 V at 10 mA (0.87 V here), IR 3 pA typ at 75 V, Cd 2 pF at 0 V, VRRM 85 V.
+.model BAS416 D(IS=2.5p N=1.5 RS=1 CJO=2p BV=85 IBV=5n)

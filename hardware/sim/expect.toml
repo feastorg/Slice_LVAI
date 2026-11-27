@@ -1,0 +1,154 @@
+# Expected behaviour of one LVAI channel (channel 0: U2, RV1, RV2, R1-R7, C5, C6, C17, D2, D3),
+# worked by hand from hardware/lvai.kicad_sch. check.py reads the parts and values from the
+# real schematic's netlist, so there is no separate bench drawing to drift.
+#
+# Stages (refs of channel 0):
+#   in_div = Vin * R4 / (R2 + R4) = Vin / 2           R2 = R4 = 22k; D2/D3 clamp it to 5V/GND
+#   Vref   = 5 V * a1                                  RV1 10k, a1 = R(wiper to GND) / 10k; U2A follower (R1 1k)
+#   U2B    = in_div * (1 + R5/R3) - Vref * R5/R3       R3 = R5 = 1k  ->  Vin - Vref
+#   U2C    = U2B * 10k / R(wiper to GND) = U2B / a2    RV2 10k; R6 1k carries no current
+#   CH0_AI = U2C through R7 1k / C6 1 uF (fc = 1 / (2 pi R7 C6) = 159.15 Hz), U2D follower
+# Fault: in_div is clamped near a rail, so I(R2) = (Vin - V(in_div)) / 22k:
+#   +24 V: (24 - 5.3..5.9) / 22k = 0.82..0.85 mA;  -24 V: (24 - 0.3..0.8) / 22k = 1.05..1.08 mA,
+#   and the current into U2B's + input stays within the MCP6004's +-2 mA (DS20001733L).
+#
+# Tolerances: MCP6004 VOS +-4.5 mV max (DS20001733L) appears x2 at U2B and x(2/a2) at the
+# output; resistor ratios are exact in the bench (1 % parts on the board).
+# Model limits: Microchip's macro model clamps its inputs about 0.3 V outside the rails (the
+# real part's abs max is VDD + 1.0 V / VSS - 1.0 V), so in a fault the model's input diodes
+# carry part of the clamp current; the 2 mA bound holds either way. BAS416 is a data-sheet
+# stand-in (models/bas416_standin.lib).
+
+[[case]]
+name = "nominal"
+analysis = "op"
+vin = 4.0
+offset = 0.5
+gain = 0.5
+
+[[case]]
+name = "gain5"
+analysis = "op"
+vin = 2.8
+offset = 0.5
+gain = 0.2
+
+[[case]]
+name = "fault_pos"
+analysis = "tran"
+start = 4.0
+vin = 24.0
+offset = 0.5
+gain = 0.5
+
+[[case]]
+name = "fault_neg"
+analysis = "tran"
+start = 4.0
+vin = -24.0
+offset = 0.5
+gain = 0.5
+
+[[case]]
+name = "ac"
+analysis = "ac"
+vin = 4.0
+offset = 0.5
+gain = 0.5
+
+# nominal: Vin 4.0 V, Vref 2.5 V, G 2
+[[measure]]
+case = "nominal"
+name = "in_div"
+expr = "v(low_voltage_analog_input_in_div)"
+expect = 2.0          # 4.0 / 2
+rtol = 0.005
+
+[[measure]]
+case = "nominal"
+name = "vref"
+expr = "v(netm_r1mpad2)"
+expect = 2.5          # 5 * 0.5
+rtol = 0.01
+
+[[measure]]
+case = "nominal"
+name = "diff"
+expr = "v(netm_u2cmp)"
+expect = 1.5          # 4.0 - 2.5
+rtol = 0.02
+
+[[measure]]
+case = "nominal"
+name = "gain_out"
+expr = "v(netm_r7mpad1)"
+expect = 3.0          # 1.5 * 10k / 5k
+rtol = 0.02
+
+[[measure]]
+case = "nominal"
+name = "ch0_ai"
+expr = "v(ch0_ai)"
+expect = 3.0          # filter and follower at DC
+rtol = 0.02
+
+# gain5: Vin 2.8 V, Vref 2.5 V, G 5
+[[measure]]
+case = "gain5"
+name = "ch0_ai"
+expr = "v(ch0_ai)"
+expect = 1.5          # (2.8 - 2.5) * 10k / 2k
+rtol = 0.05
+
+# faults on the terminal
+[[measure]]
+case = "fault_pos"
+name = "i_r2"
+expr = "(v(ch0_in) - v(low_voltage_analog_input_in_div)) / 22e3"
+expect = 0.835e-3     # (24 - 5.6) / 22k
+rtol = 0.03
+
+[[measure]]
+case = "fault_pos"
+name = "i_plus"
+expr = "i(viplus)"
+max = 2e-3            # MCP6004 input current, abs max
+
+[[measure]]
+case = "fault_pos"
+name = "in_div"
+expr = "v(low_voltage_analog_input_in_div)"
+# informational: the clamped node
+
+[[measure]]
+case = "fault_neg"
+name = "i_r2"
+expr = "(v(ch0_in) - v(low_voltage_analog_input_in_div)) / 22e3"
+expect = -1.067e-3    # -(24 - 0.5) / 22k
+rtol = 0.02
+
+[[measure]]
+case = "fault_neg"
+name = "i_plus"
+expr = "i(viplus)"
+max = 2e-3
+
+[[measure]]
+case = "fault_neg"
+name = "in_div"
+expr = "v(low_voltage_analog_input_in_div)"
+
+# ac: small-signal gain terminal -> Nano pin = 0.5 * 2 * 2 = 2 (6.02 dB), corner of R7/C6
+[[measure]]
+case = "ac"
+name = "gain_lf_db"
+meas = "find vdb(ch0_ai) at=1"
+expect = 6.0206       # 20 log10(2)
+rtol = 0.01
+
+[[measure]]
+case = "ac"
+name = "fc"
+meas = "when vdb(ch0_ai)=3.0103 fall=1"
+expect = 159.15       # 1 / (2 pi 1k 1u)
+rtol = 0.02
