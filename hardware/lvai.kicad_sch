@@ -2458,7 +2458,7 @@
 		)
 		(uuid "6759eb20-1132-48be-857f-baa79e2ad18f")
 	)
-	(text "Input protection: R2 and R4 (22k) halve the 0-10 V input to 0-5 V at in_div.\nD(5V) and D(GND), BAS416 (<= 5 nA leakage), clamp in_div to the rails.\n+24 V on the terminal: (24 - 5.6) / 22k = 0.84 mA, less 0.25 mA in R4;\n-24 V: (24 - 0.7) / 22k = 1.06 mA. R2 alone keeps the MCP6004 input\nwithin its +-2 mA (DS20001733L) even if the diodes did not conduct."
+	(text "Input protection: R2 and R4 (22k) halve the 0-10 V input to 0-5 V at in_div.\nD(5V) and D(GND) are BAS416 (<= 5 nA leakage). At +24 V, D(5V) holds in_div\nat 5.75 V (5.9 V at max VF), inside the MCP6004 abs max VDD + 1.0 V\n(DS20001733L); I(R2) = (24 - 5.75) / 22k = 0.83 mA. At -24 V the MCP6004's\nown input diode conducts first and carries 1.06 of 1.08 mA, inside its\n+-2 mA. Clamps to be revisited with Slice_LVAI#2."
 		(exclude_from_sim no)
 		(at 110.49 147.32 0)
 		(effects

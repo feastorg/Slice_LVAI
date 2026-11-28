@@ -8,8 +8,8 @@ The slice reads six single-ended analog voltages into an Arduino Nano.
 Each channel is the same circuit, built around one MCP6004 quad op-amp:
 
 1. **Input divider and protection.** R2 and R4 (22 kΩ each) halve the
-   terminal voltage; two BAS416 low-leakage diodes clamp the divided node
-   to 5 V and GND.
+   terminal voltage; two BAS416 low-leakage diodes, to 5 V and to GND,
+   limit the divided node in a fault (see Protection below).
 2. **Offset.** A 10 kΩ trimmer sets a reference voltage, Voff (0-5 V),
    buffered by a follower.
 3. **Difference stage.** With R3 = R5 = 1 kΩ it outputs Vin - Voff.
@@ -27,12 +27,17 @@ to Voff + 5 V; a higher gain narrows the window.
 - **Range:** 0-10 V, unipolar, referenced to the slice's GND (pin 2 of
   J6-J8). Bipolar inputs are planned for a later revision, see issue #2.
 - **Input impedance:** 44 kΩ (R2 + R4).
-- **Protection:** R2 limits the fault current and the clamps hold the
-  op-amp input inside its rails. With 24 V on a terminal the current is
-  (24 - 5.6) / 22 kΩ = 0.84 mA; with -24 V it is 1.06 mA. Both are inside
-  the MCP6004's ±2 mA input current limit (Microchip DS20001733L) from R2
-  alone. The clamps leak at most 5 nA (BAS416, 75 V, 25 °C), about
-  0.06 mV across the 11 kΩ source resistance of the divider.
+- **Protection:** R2 limits the fault current. With +24 V on a terminal,
+  D2 (BAS416 to 5 V) holds the divided node at about 5.75 V, 5.9 V at the
+  BAS416's maximum forward voltage: inside the MCP6004's VDD + 1.0 V
+  absolute maximum (Microchip DS20001733L), with 0.1 V to spare at that
+  forward voltage and less in the cold. R2 then carries
+  (24 - 5.75) / 22 kΩ = 0.83 mA. With -24 V the op-amp's own input diode
+  conducts before D3 does and carries most of the current, 1.06 of
+  1.08 mA in simulation, inside the MCP6004's ±2 mA input current limit.
+  The clamps leak at most 5 nA (BAS416, 75 V, 25 °C), about 0.06 mV
+  across the 11 kΩ source resistance of the divider. The clamps are
+  revisited with the bipolar input (issue #2).
 
 ## Channel map
 

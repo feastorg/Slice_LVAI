@@ -3,21 +3,22 @@
 # real schematic's netlist, so there is no separate bench drawing to drift.
 #
 # Stages (refs of channel 0):
-#   in_div = Vin * R4 / (R2 + R4) = Vin / 2           R2 = R4 = 22k; D2/D3 clamp it to 5V/GND
+#   in_div = Vin * R4 / (R2 + R4) = Vin / 2           R2 = R4 = 22k; D2/D3 BAS416 to 5V/GND
 #   Vref   = 5 V * a1                                  RV1 10k, a1 = R(wiper to GND) / 10k; U2A follower (R1 1k)
 #   U2B    = in_div * (1 + R5/R3) - Vref * R5/R3       R3 = R5 = 1k  ->  Vin - Vref
 #   U2C    = U2B * 10k / R(wiper to GND) = U2B / a2    RV2 10k; R6 1k carries no current
 #   CH0_AI = U2C through R7 1k / C6 1 uF (fc = 1 / (2 pi R7 C6) = 159.15 Hz), U2D follower
-# Fault: in_div is clamped near a rail, so I(R2) = (Vin - V(in_div)) / 22k:
+# Fault: in_div is held near a rail (D2 above 5 V; below GND U2B's own input diode conducts
+# first), so I(R2) = (Vin - V(in_div)) / 22k:
 #   +24 V: (24 - 5.3..5.9) / 22k = 0.82..0.85 mA;  -24 V: (24 - 0.3..0.8) / 22k = 1.05..1.08 mA,
 #   and the current into U2B's + input stays within the MCP6004's +-2 mA (DS20001733L).
 #
 # Tolerances: MCP6004 VOS +-4.5 mV max (DS20001733L) appears x2 at U2B and x(2/a2) at the
 # output; resistor ratios are exact in the bench (1 % parts on the board).
 # Model limits: Microchip's macro model clamps its inputs about 0.3 V outside the rails (the
-# real part's abs max is VDD + 1.0 V / VSS - 1.0 V), so in a fault the model's input diodes
-# carry part of the clamp current; the 2 mA bound holds either way. BAS416 is a data-sheet
-# stand-in (models/bas416_standin.lib).
+# real part's abs max is VDD + 1.0 V / VSS - 1.0 V), so at -24 V the model's input diode
+# carries most of the current (1.063 of 1.077 mA) and D3 little; the 2 mA bound holds either
+# way. BAS416 is a data-sheet stand-in (models/bas416_standin.lib).
 
 [[case]]
 name = "nominal"
