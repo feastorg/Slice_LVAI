@@ -1216,7 +1216,7 @@
 		)
 		(uuid "090a8516-bacb-4b43-8348-0e85b527c509")
 	)
-	(text_box "Non-inverting gain stage. UxC+ takes the difference stage output. RV (10k) runs from UxC out (pin 1) to GND (pin 3); its wiper drives UxC- through R (1k), which carries no current, so UxC- sits at the wiper voltage:\n\nG = Vout / Vin = 10k / R(wiper to GND)\nR = 10k: G = 1.0\nR = 5k: G = 2.0\nR = 2k: G = 5.0\nR = 1k: G = 10\nNear R = 0 the stage runs open loop: keep the wiper off the GND end."
+	(text_box "Non-inverting gain stage. UxC+ takes the difference stage output. RV (10k) runs from UxC out (pin 1) to GND (pin 3); its wiper drives UxC- through R (1k), which carries no current, so UxC- sits at the wiper voltage:\n\nG = Vout / Vin = 10k / R(wiper to GND)\nR = 10k: G = 1.0\nR = 5k: G = 2.0\nR = 2k: G = 5.0\nR = 1k: G = 10\nR near 0: open loop, keep the wiper off GND."
 		(exclude_from_sim no)
 		(at 168.91 101.6 0)
 		(size 50.8 26.67)
@@ -2037,14 +2037,13 @@
 			)
 		)
 		(property "Value" "100nF X7R"
-			(at 26.67 83.82 0)
+			(at 25.9 89.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -4247,25 +4246,25 @@
 		(dnp no)
 		(uuid "d5f324ca-e46a-49f9-ad6a-43d955ab579f")
 		(property "Reference" "C11"
-			(at 33.909 81.3816 0)
+			(at 38.1 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "1uF X7R"
-			(at 33.909 83.693 0)
+			(at 38.1 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
