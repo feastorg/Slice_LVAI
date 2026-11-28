@@ -2026,18 +2026,17 @@
 		(dnp no)
 		(uuid "e2a211bf-8dbd-438b-b4f8-5c4dd5259cbf")
 		(property "Reference" "C17"
-			(at 26.67 81.28 0)
+			(at 25.2 77.5 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "100nF X7R"
-			(at 25.9 89.15 90)
+			(at 25.2 87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2480,7 +2479,7 @@
 		(dnp no)
 		(uuid "19449b14-5054-4030-b8d0-ed1fd24487f8")
 		(property "Reference" "R23"
-			(at 128.27 70.6882 0)
+			(at 128.27 69.4182 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2490,7 +2489,7 @@
 			)
 		)
 		(property "Value" "22K"
-			(at 128.27 72.9996 0)
+			(at 128.27 71.7296 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4246,25 +4245,23 @@
 		(dnp no)
 		(uuid "d5f324ca-e46a-49f9-ad6a-43d955ab579f")
 		(property "Reference" "C11"
-			(at 38.1 81.28 0)
+			(at 40.5 78.5 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "1uF X7R"
-			(at 38.1 83.82 0)
+			(at 40.5 88 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
